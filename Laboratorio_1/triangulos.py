@@ -171,3 +171,42 @@ def clasificar_triangulo(lado1, lado2, lado3):
 # print(f"El triángulo es: {clasificacion}") 
 
 
+#  Casos de Prueba Adicionales ////////////
+#Caso de prueba 14
+# Entrada de valores con espacios adicionales
+# El programa debe clasificar el triangulo aunque 
+# existan espacios al inicio o al final de cada valor ingresado
+#Respuesta Esperada:
+# Clasificacion correcta del triangulo ingresado
+
+# Caso de prueba 15
+# Entrada de valores muy grandes
+# El programa debe clasificar el triangulo aunque 
+# se ingresen valores muy grandes
+#Codigo:
+# clasificacion = clasificar_triangulo(999999999, 999999999, 999999999)
+# print(f"El triángulo es: {clasificacion}") 
+#Respuesta Esperada:
+# Triangulo Equilatero
+
+#Caso de prueba 16
+# Entrada de valores muy grandes y con formato cientiefico "e"
+#Codigo:
+#clasificacion = clasificar_triangulo(1e10, 2e10, 2e10)
+#print(f"El triángulo es: {clasificacion}") 
+#Respuesta Esperada:
+# Triangulo Isosceles
+
+#Caso de prueba 17
+# Entrada de valores en formato de Numeros Romanos 
+#Respuesta Esperada:
+# Error por la función int(input()) 
+# no puede convertir números romanos en números enteros.
+
+# Caso de prueba 18
+# Entrada de valores como operaciones matematicas
+# Codigo
+#clasificacion = clasificar_triangulo(2+4, 3*2, 1*6) 
+# Respuesta esperada
+# Error de conversion, la funcion int(input()) no realiza operaciones 
+
