@@ -24,6 +24,9 @@ def clasificar_triangulo(lado1, lado2, lado3):
         return  "El triángulo debe contener sólo valores enteros,no ingrese valores en numeros romanos"
     # ---------------------------------------------------------------------------------
 
+    if not lado1 or not lado2 or not lado3:
+        return("Triángulo inválido, Ingrese los datos correctamente")
+  
     # Caso de Prueba 18
     # Verificar si los lados contienen operadores
     if contiene_operadores(lado1) or contiene_operadores(lado2) or contiene_operadores(lado3):
