@@ -1,25 +1,55 @@
+# Caso de Prueba 18 ------------------------------
+def contiene_operadores(valor):
+    operadores = ['+', '-', '*', '/']
+    return any(op in valor for op in operadores)
+# -------------------------------------------------
 
-def clasificar_triangulo(lado1, lado2, lado3):   
-    """   Esta función clasifica un triángulo según sus lados.    
-    Args:       
-          lado1: La longitud del primer lado.       
-          lado2: La longitud del segundo lado.       
-          lado3: La longitud del tercer lado.    
-    Returns:       
-        Un string que indica si el triángulo es escaleno, isósceles, equilátero o inválido.   
-        """    
-    # Verificar si el triángulo es válido   
-    if lado1 + lado2 <= lado3 or lado1 + lado3 <= lado2 or lado2 + lado3 <= lado1:     
-        return "Triángulo inválido"    
-    
+def clasificar_triangulo(lado1, lado2, lado3):
+    # Caso de prueba 16 ---------------------------
+    # Verificar si los lados son enteros literales
+    try:
+        lado1 = int(lado1)
+        lado2 = int(lado2)
+        lado3 = int(lado3)
+    except ValueError:
+        return "El triángulo debe contener sólo valores enteros y en formato literal"
+    # ---------------------------------------------------------------------------------
 
-    if lado1 == lado2 == lado3:     
-        return "Triángulo equilátero"   
-    elif lado1 == lado2 or lado1 == lado3 or lado2 == lado3:     
-        return "Triángulo isósceles"   
-    else:     
-        return "Triángulo escaleno"  
-    # Clasificar el triángulo y mostrar el resultado 
+    # Caso de prueba 17    
+    try:
+        lado1 = int(lado1)
+        lado2 = int(lado2)
+        lado3 = int(lado3)
+    except ValueError:
+        return  "El triángulo debe contener sólo valores enteros,no ingrese valores en numeros romanos"
+    # ---------------------------------------------------------------------------------
+  
+    # Caso de Prueba 18
+    # Verificar si los lados contienen operadores
+    if contiene_operadores(lado1) or contiene_operadores(lado2) or contiene_operadores(lado3):
+        return "Los lados no deben contener operadores"
+    # ---------------------------------------------------------------------------------
+
+    # Verificar si el triángulo es válido
+    if lado1 + lado2 <= lado3 or lado1 + lado3 <= lado2 or lado2 + lado3 <= lado1:
+        return "Triángulo inválido"
+
+    # Clasificar el triángulo
+    if lado1 == lado2 == lado3:
+        return "Triángulo equilátero"
+    elif lado1 == lado2 or lado1 == lado3 or lado2 == lado3:
+        return "Triángulo isósceles"
+    else:
+        return "Triángulo escaleno"
+
+# Solicitar al usuario la longitud de los lados y verificar si son enteros literales
+# lado1 = input("Ingrese la longitud del primer lado: ")
+# lado2 = input("Ingrese la longitud del segundo lado: ")
+# lado3 = input("Ingrese la longitud del tercer lado: ")
+
+# clasificacion = clasificar_triangulo(lado1, lado2, lado3) 
+# print(f"El triángulo es: {clasificacion}") 
+
 
 #lado1 = int(input("Ingrese la longitud del primer lado: ")) 
 #lado2 = int(input("Ingrese la longitud del segundo lado: ")) 
@@ -84,10 +114,10 @@ def clasificar_triangulo(lado1, lado2, lado3):
 # print(f"El triángulo es: {clasificacion}") 
 
 # Caso de Prueba 7
-#Verificar que la función determine el triangulo con datos decimales, boolean y String
-#Respuesta Esperada:  Triángulo inválido
+# Verificar que la función determine el triangulo con datos decimales, boolean y String
+# Respuesta Esperada:  Triángulo inválido
 
-#Código
+# Código
 # clasificacion = clasificar_triangulo(True, "3.5", 2.6)
 # print(f"El triángulo es: {clasificacion}") 
 
@@ -96,11 +126,11 @@ def clasificar_triangulo(lado1, lado2, lado3):
 #Respuesta Esperada: Triángulo inválido
 
 #Código
-# lado1 = int(input("Ingrese la longitud del primer lado: ")) 
-# lado2 = int(input("Ingrese la longitud del segundo lado: ")) 
-# lado3 = int(input("Ingrese la longitud del tercer lado: "))  
-# clasificacion = clasificar_triangulo(lado1, lado2, lado3)
-# print(f"El triángulo es: {clasificacion}") 
+lado1 = input("Ingrese la longitud del primer lado: ")
+lado2 = input("Ingrese la longitud del segundo lado: ") 
+lado3 = input("Ingrese la longitud del tercer lado: ")  
+clasificacion = clasificar_triangulo(lado1, lado2, lado3)
+print(f"El triángulo es: {clasificacion}") 
 
 ##Pruebas del Libro 
 #Caso de prueba 9
