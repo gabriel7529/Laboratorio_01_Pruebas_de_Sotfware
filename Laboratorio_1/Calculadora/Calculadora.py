@@ -41,7 +41,7 @@ def menu():
     print("\n")
     # MENU DE OPCIONES
 
-# Modificacione para caso de prueba 13
+# Modificacione para caso de prueba 12
 def opciones():
     opcion = input("Seleccione una Opción... ")
     #retornando el valor, sin espacios en blanco
