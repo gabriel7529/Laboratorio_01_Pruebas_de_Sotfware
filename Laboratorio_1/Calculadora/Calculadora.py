@@ -50,8 +50,15 @@ def opciones():
 def valores():
    
     try:
-        valor1 = float(input("Ingrese su primer valor: "))
-        valor2 = float(input("Ingrese su segundo valor: "))
+        #Modificaciones para caso de prueba 11 
+        valor1 = input("Ingrese su primer valor: ")
+        valor2 = input("Ingrese su segundo valor: ")
+        if 'e' in valor1 or 'e' in valor2:
+            print("Por favor, no ingrese valores en formato de notación científica.")
+            return None, None
+        valor1 = float(valor1)
+        valor2 = float(valor2)
+        #------------------------------------------
     except ValueError:
         print("Operación no realizada, error al ingresar los valores. Intente nuevamente.")
         return None, None
@@ -89,10 +96,12 @@ while True:
         print("\n")
         print("** Entrando al módulo de Multiplicación **")
         valor1, valor2 = valores()
-        resultadoMultiplicacion = multiplicar(valor1, valor2)
-        print("El resultado de su Multiplicación es: " + str(resultadoMultiplicacion))
+        #Modificacion para caso de prueba 11
+        if(valor1 != None or valor2 != None):
+            resultadoMultiplicacion = multiplicar(valor1, valor2)
+            print("El resultado de su Multiplicación es: " + str(resultadoMultiplicacion))
         nuevaOperacion = errorOperacion()
-    #Realizando pruebas para el caso 9
+   
     elif opc == '4':
         print("\n")
         print("** Entrando al módulo de División **")
