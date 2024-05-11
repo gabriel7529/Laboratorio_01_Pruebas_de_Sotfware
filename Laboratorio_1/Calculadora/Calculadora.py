@@ -44,7 +44,8 @@ def menu():
 # Realizando pruebas para caso de prueba 13
 def opciones():
     opcion = input("Seleccione una Opción... ")
-    return opcion
+    #retornando el valor, sin espacios en blanco
+    return opcion.strip() 
 
 def valores():
    
