@@ -21,6 +21,7 @@ def dividir(valor1=0, valor2=0):
     if valor2 == 0:
         print("No se puede dividir entre 0")
         return 0
+    
     #Modificacion realizada
     #Se almacena el valor de la division antes de ser retornado
     #resultado = valor1 / valor2
