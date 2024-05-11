@@ -88,6 +88,7 @@ while True:
         resultadoMultiplicacion = multiplicar(valor1, valor2)
         print("El resultado de su Multiplicación es: " + str(resultadoMultiplicacion))
         nuevaOperacion = errorOperacion()
+    #Realizando caso de prueba 8
     elif opc == '4':
         print("\n")
         print("** Entrando al módulo de División **")
