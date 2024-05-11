@@ -15,19 +15,14 @@ def restar(valor1=0, valor2=0):
 def multiplicar(valor1=0, valor2=0):
     return valor1 * valor2
 
-#Realizando pruebas para el caso de prueba 10
+
 # FUNCION QUE DIVIDE DOS VALORES
 def dividir(valor1=0, valor2=0):
     if valor2 == 0:
         print("No se puede dividir entre 0")
         return 0
-    
-    #Modificacion realizada
-    #Se almacena el valor de la division antes de ser retornado
-    #resultado = valor1 / valor2
-    #Se retorna el resultado redondeando el valor a 4 decimales.
-    #return round(resultado, 4) 
     return valor1 / valor2
+
 
 # FUNCIONES DE LA CALCULADORA
 def menu():
@@ -49,6 +44,8 @@ def menu():
 def opciones():
     opcion = input("Seleccione una Opción... ")
     return opcion
+
+#Realizando pruebas para el caso de prueba 11
 
 def valores():
    
