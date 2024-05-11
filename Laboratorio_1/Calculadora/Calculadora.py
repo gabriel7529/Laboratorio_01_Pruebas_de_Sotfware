@@ -41,16 +41,13 @@ def menu():
     print("\n")
     # MENU DE OPCIONES
 
-# Modificaciones para caso de prueba 13
 def opciones():
-    opcion = input("Seleccione una Opción... ")   
-    #se comprueba que la opcion sea un solo caracter
-    if len(opcion)==1:
-        return opcion.strip() #retornando el valor, sin espacios en blanco
-    #de otra forma se muestra el mensaje de error
+    opcion = input("Seleccione una Opción... ")       
+    if len(opcion)==1: #caso de prueba 13 
+        return opcion.strip() #retorna valor, sin espacios en blanco
     else:
         print("Por favor, ingrese el número de la opción del menú.")
-        return None #retornando none
+        return None 
 
 def valores():
    
