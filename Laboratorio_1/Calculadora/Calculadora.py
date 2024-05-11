@@ -40,11 +40,17 @@ def menu():
     print("** ::::::::::::::::::::::::: **")
     print("\n")
     # MENU DE OPCIONES
-    
-# Realizando pruebas para caso de prueba 13
+
+# Modificaciones para caso de prueba 13
 def opciones():
-    opcion = input("Seleccione una Opción... ")    
-    return opcion.strip() #retornando el valor, sin espacios en blanco
+    opcion = input("Seleccione una Opción... ")   
+    #se comprueba que la opcion sea un solo caracter
+    if len(opcion)==1:
+        return opcion.strip() #retornando el valor, sin espacios en blanco
+    #de otra forma se muestra el mensaje de error
+    else:
+        print("Por favor, ingrese el número de la opción del menú.")
+        return None #retornando none
 
 def valores():
    
@@ -73,7 +79,7 @@ while True:
     menuPrincipal = menu()
     opc = opciones()
 
-    if opc == 's':
+    if opc =='s':
         print("Saliendo...")
         break
     elif opc == '1':
